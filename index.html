@@ -1,1 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wartung – helestra</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .maintenance-container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 60px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            max-width: 280px;
+            height: auto;
+            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.08));
+        }
+
+        .content {
+            background: white;
+            padding: 60px 40px;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #242424;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .text-primary {
+            font-size: 1.1rem;
+            color: #666666;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .divider {
+            height: 1px;
+            background: #e8e8e8;
+            margin: 40px 0;
+        }
+
+        .text-secondary {
+            font-size: 0.95rem;
+            color: #999999;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .lang-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #cccccc;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .loading-indicator {
+            display: inline-block;
+            margin-top: 50px;
+        }
+
+        .loading-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #cc2927;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.4;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logo-container {
+                margin-bottom: 40px;
+            }
+
+            .logo-container img {
+                max-width: 220px;
+            }
+
+            .content {
+                padding: 40px 30px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 25px;
+            }
+
+            .text-primary {
+                font-size: 1rem;
+                margin-bottom: 30px;
+            }
+
+            .divider {
+                margin: 30px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                padding: 30px 20px;
+                border-radius: 0;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+
+            .text-primary {
+                font-size: 0.95rem;
+            }
+
+            .text-secondary {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="maintenance-container">
+        <div class="logo-container">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Crect width='1024' height='1024' fill='%231a1a1a' rx='120'/%3E%3Cpolygon points='200,150 500,150 200,750' fill='%23cc2927'/%3E%3Ctext x='512' y='900' font-size='280' font-family='Arial, sans-serif' fill='%23ffffff' text-anchor='middle' font-weight='300' letter-spacing='-5'%3Ehelestra%3C/text%3E%3C/svg%3E" alt="helestra">
+        </div>
+
+        <div class="content">
+            <h1>Wartungsarbeiten im Gange</h1>
+
+            <p class="text-primary">
+                Wir führen derzeit wichtige Wartungsarbeiten durch, um dir bald wieder den bestmöglichen Service zu bieten. Danke für deine Geduld – wir sind in Kürze wieder für dich da.
+            </p>
+
+            <div class="divider"></div>
+
+            <div class="lang-label">English</div>
+            <p class="text-secondary">
+                We are currently carrying out important maintenance work to provide you with the best service again soon. Thank you for your patience – we will be back for you shortly.
+            </p>
+
+            <div class="loading-indicator">
+                <div class="loading-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
