@@ -27,7 +27,7 @@
         }
 
         .maintenance-container {
-            max-width: 600px;
+            max-width: 900px;
             width: 100%;
             text-align: center;
         }
@@ -39,7 +39,7 @@
         }
 
         .logo-container img {
-            max-width: 280px;
+            max-width: 300px;
             height: auto;
             filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.08));
         }
@@ -56,29 +56,20 @@
             color: #242424;
             font-weight: 400;
             letter-spacing: -0.5px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             line-height: 1.2;
         }
 
-        .text-primary {
-            font-size: 1.1rem;
-            color: #666666;
-            line-height: 1.8;
-            margin-bottom: 40px;
-            font-weight: 300;
+        .languages-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+            align-items: start;
         }
 
-        .divider {
-            height: 1px;
-            background: #e8e8e8;
-            margin: 40px 0;
-        }
-
-        .text-secondary {
-            font-size: 0.95rem;
-            color: #999999;
-            line-height: 1.8;
-            font-weight: 300;
+        .language-section {
+            text-align: left;
         }
 
         .lang-label {
@@ -88,11 +79,71 @@
             color: #cccccc;
             margin-bottom: 12px;
             font-weight: 500;
+            display: block;
+        }
+
+        .text-language {
+            font-size: 1rem;
+            color: #666666;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .text-primary {
+            color: #242424;
+            font-weight: 400;
+        }
+
+        .text-secondary {
+            color: #999999;
+        }
+
+        .divider {
+            height: 1px;
+            background: #e8e8e8;
+            margin: 50px 0;
+        }
+
+        .contact-section {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 4px;
+            border-left: 3px solid #cc2927;
+        }
+
+        .contact-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #cccccc;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            font-size: 0.95rem;
+            color: #242424;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+        }
+
+        .contact-info a {
+            color: #cc2927;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
         }
 
         .loading-indicator {
             display: inline-block;
-            margin-top: 50px;
+            margin-top: 40px;
         }
 
         .loading-dots {
@@ -135,7 +186,7 @@
             }
 
             .logo-container img {
-                max-width: 220px;
+                max-width: 240px;
             }
 
             .content {
@@ -144,16 +195,29 @@
 
             h1 {
                 font-size: 1.8rem;
-                margin-bottom: 25px;
+                margin-bottom: 35px;
             }
 
-            .text-primary {
-                font-size: 1rem;
-                margin-bottom: 30px;
+            .languages-wrapper {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin-bottom: 40px;
+            }
+
+            .language-section {
+                text-align: center;
             }
 
             .divider {
-                margin: 30px 0;
+                margin: 40px 0;
+            }
+
+            .contact-section {
+                padding: 25px;
+            }
+
+            .contact-info {
+                font-size: 0.9rem;
             }
         }
 
@@ -165,15 +229,20 @@
 
             h1 {
                 font-size: 1.5rem;
-                margin-bottom: 20px;
+                margin-bottom: 25px;
             }
 
-            .text-primary {
+            .text-language {
                 font-size: 0.95rem;
             }
 
-            .text-secondary {
-                font-size: 0.9rem;
+            .contact-info {
+                font-size: 0.85rem;
+                line-height: 1.6;
+            }
+
+            .contact-info p {
+                margin-bottom: 6px;
             }
         }
     </style>
@@ -181,22 +250,38 @@
 <body>
     <div class="maintenance-container">
         <div class="logo-container">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Crect width='1024' height='1024' fill='%231a1a1a' rx='120'/%3E%3Cpolygon points='200,150 500,150 200,750' fill='%23cc2927'/%3E%3Ctext x='512' y='900' font-size='280' font-family='Arial, sans-serif' fill='%23ffffff' text-anchor='middle' font-weight='300' letter-spacing='-5'%3Ehelestra%3C/text%3E%3C/svg%3E" alt="helestra">
+            <img src="wartungsseite.png" alt="helestra Logo">
         </div>
 
         <div class="content">
             <h1>Wartungsarbeiten im Gange</h1>
 
-            <p class="text-primary">
-                Wir führen derzeit wichtige Wartungsarbeiten durch, um dir bald wieder den bestmöglichen Service zu bieten. Danke für deine Geduld – wir sind in Kürze wieder für dich da.
-            </p>
+            <div class="languages-wrapper">
+                <div class="language-section">
+                    <span class="lang-label">Deutsch</span>
+                    <p class="text-language text-primary">
+                        Wir führen derzeit wichtige Wartungsarbeiten durch, um dir bald wieder den bestmöglichen Service zu bieten. Danke für deine Geduld – wir sind in Kürze wieder für dich da.
+                    </p>
+                </div>
+                <div class="language-section">
+                    <span class="lang-label">English</span>
+                    <p class="text-language text-secondary">
+                        We are currently carrying out important maintenance work to provide you with the best service again soon. Thank you for your patience – we will be back for you shortly.
+                    </p>
+                </div>
+            </div>
 
             <div class="divider"></div>
 
-            <div class="lang-label">English</div>
-            <p class="text-secondary">
-                We are currently carrying out important maintenance work to provide you with the best service again soon. Thank you for your patience – we will be back for you shortly.
-            </p>
+            <div class="contact-section">
+                <span class="contact-label">Kontakt</span>
+                <div class="contact-info">
+                    <p><strong>Helestra Leuchten GmbH</strong></p>
+                    <p>An den Breiten 7<br>01454 Leppersdorf</p>
+                    <p>Tel.: <a href="tel:+493528438300">+49 (0) 3528 / 43 83 - 0</a></p>
+                    <p>Mail: <a href="mailto:info@helestra.de">info@helestra.de</a></p>
+                </div>
+            </div>
 
             <div class="loading-indicator">
                 <div class="loading-dots">
